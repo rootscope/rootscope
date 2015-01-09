@@ -7,7 +7,7 @@ app.directive('scrollBlur', function($window){
     },
     link: function(scope, element, attrs) {
       var handler = function() {
-        scope.opacity = $window.scrollY / 170;
+        scope.opacity = $window.scrollY / 420;
         console.log(scope.opacity);
       }
       angular.element($window).on('scroll', scope.$apply.bind(scope, handler));
@@ -34,9 +34,5 @@ app.directive('scrollPosition', function($window) {
 app.controller("rootAppCtrl", function($scope, $window){
   $scope.scroll = 0;
   $scope.opacity = 0;
-
-  $scope.blur = function(){
-    oVal = $window.scrollY / 170;
-    angular.element($(".blur")).css("opacity", oVal); 
-  };
+  $scope.margin = 0;
 });
