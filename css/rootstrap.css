@@ -27,14 +27,14 @@ body{
   line-height: 17px;
 }
 
-.bg{
+.self-image{
   position:relative;
   width:100%;
   height:540px;
   top:0;
   left:0;
 }
-.bg> .img-src{
+.self-image> .img-src{
   position:absolute;
   width:100%;
   height:540px;
