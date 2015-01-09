@@ -36,3 +36,29 @@ app.controller("rootAppCtrl", function($scope, $window){
   $scope.opacity = 0;
   $scope.margin = 0;
 });
+
+var ui = (function($){
+  var $e = {
+    window: $(window),
+    splash_bg: $('.img-src'),
+    splash_title: $('#splash-title')
+  };
+  var laxSplash = function(o){
+    $e.splash_bg.css('margin-top', -0.07*o + 'px');
+    $e.splash_title.css('margin-top', -0.31*o + 'px');
+  };
+  var init = function(){
+    $e.window.scroll(function(e){
+      laxSplash(window.pageYOffset);
+      console.log('laxSplash');
+    });
+  }
+  return{
+    init: init
+  };
+})(jQuery);
+
+$(document).ready(function(){
+  ui.init();
+});
+
