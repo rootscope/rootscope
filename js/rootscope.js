@@ -1,5 +1,21 @@
 var app = angular.module("rootApp", []);
 
+app.directive('scrollBlur', function($window){
+  return {
+    scope: {
+      opacity: '=scrollBlur'
+    },
+    link: function(scope, element, attrs) {
+      var handler = function() {
+        scope.opacity = $window.scrollY / 170;
+        console.log(scope.opacity);
+      }
+      angular.element($window).on('scroll', scope.$apply.bind(scope, handler));
+      handler();
+    }
+  };
+});
+
 app.directive('scrollPosition', function($window) {
   return {
     scope: {
@@ -15,6 +31,12 @@ app.directive('scrollPosition', function($window) {
   };
 });
 
-app.controller("rootAppCtrl", function($scope){
+app.controller("rootAppCtrl", function($scope, $window){
   $scope.scroll = 0;
+  $scope.opacity = 0;
+
+  $scope.blur = function(){
+    oVal = $window.scrollY / 170;
+    angular.element($(".blur")).css("opacity", oVal); 
+  };
 });
