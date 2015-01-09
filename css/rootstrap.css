@@ -33,18 +33,14 @@ body{
   height:540px;
   top:0;
   left:0;
-  border: 1px solid black;
 }
 .bg> .img-src{
-    position:absolute;
-    width:100%;
-    height:540px;
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position: center center;
-}
-.blur{
-  opacity:0;
+  position:absolute;
+  width:100%;
+  height:540px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center center;
 }
 
 .test{
