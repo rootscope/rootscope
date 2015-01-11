@@ -49,6 +49,13 @@ body{
   background-size:cover;
   background-position: center center;
 }
+.splash> #splash-title{
+  position: fixed;
+  top: 420px;
+  left: 100px;
+  color: #FFFFFF;
+}
+
 
 .test{
   position: fixed;

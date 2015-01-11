@@ -5,12 +5,11 @@
   <title>rootscope</title>
   <link href="libs/bootstrap.css" rel="stylesheet" />
   <link href="css/rootstrap.css" rel="stylesheet" />
-  <script src="libs/jquery.min.js"></script>
 </head>
 
 <body ng-controller="rootAppCtrl">
   <div class="navbar navbar-inverse">
-    <a class="navbar-brand" href="#">rootscope</a>
+    <a class="navbar-brand" href="#">home</a>
   </div>
 
   <div class="splash">
@@ -18,12 +17,14 @@
     <div class="img-src"
       style="opacity: 0; background-image: url(../res/self_blur.jpg)"
       ng-style="{'opacity': opacity}" scroll-blur="opacity"></div>
+    <div id="splash-title"><h1>Neel Pedersen</h1></div>
   </div>
   
   <span class='test' scroll-position="scroll">{{scroll}}</span>
 
   <script src="libs/angular.js"></script>
   <script src="libs/angular-route.js"></script>
+  <script src="libs/jquery.min.js"></script>
   <script src="js/rootscope.js"></script>
 </body>
 
